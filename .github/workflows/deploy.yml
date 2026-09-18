@@ -15,10 +15,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: flutter_aprendices
-
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -45,7 +41,7 @@ jobs:
       - name: Preparar archivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: flutter_aprendices/build/web
+          path: build/web
 
   deploy:
     needs: build
